@@ -62,6 +62,7 @@ import org.semanticweb.elk.owlapi.ElkReasonerFactory;
 import org.semanticweb.owlapi.apibinding.OWLManager;
 import org.semanticweb.owlapi.formats.FunctionalSyntaxDocumentFormat;
 import org.semanticweb.owlapi.formats.ManchesterSyntaxDocumentFormat;
+import org.semanticweb.owlapi.formats.NTriplesDocumentFormat;
 import org.semanticweb.owlapi.formats.OBODocumentFormat;
 import org.semanticweb.owlapi.formats.OWLXMLDocumentFormat;
 import org.semanticweb.owlapi.formats.RDFXMLDocumentFormat;
@@ -3219,6 +3220,9 @@ public class CommandRunner extends CommandRunnerBase {
                         }
                         else if (ofmtname.equals("turtle") || ofmtname.equals("ttl")) {
                             ofmt = new TurtleDocumentFormat();
+                        }
+                        else if (ofmtname.equals("ntriples") || ofmtname.equals("nt")) {
+                            ofmt = new NTriplesDocumentFormat();
                         }
                         else if (ofmtname.equals("trig")) {
                             ofmt = new TrigDocumentFormat();
